@@ -1,8 +1,3 @@
-## The following functions calculate the inverse of a matrix and saves it
-## to the cache such that the next time the user attempts to calculate the
-## matrix inverse, the previously saved value is returned instead of
-## repeating the calculation.
-
 ## This function creates a special "matrix" object, which is really a list 
 ## containing a function to
 ## 1. set the value of the matrix
@@ -24,10 +19,7 @@ makeVector <- function(x = numeric()) {
 }
 
 ## The following function calculates the inverse of the special "matrix" created
-## with the above function. However, it first checks to see if the inverse
-## has already been caclulated. If so, it 'get's the inverse from the cache
-## and skips the computation. Otherwise, it calculates the matrix inverse
-## and sets the value of the inverse in the cache via the 'setinverse' function.
+## with the above function.
 cachemean <- function(x, ...) {
        m <- x$getmean()
        if(!is.null(m)) {
